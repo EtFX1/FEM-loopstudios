@@ -1,0 +1,585 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-white: hsl(0, 0%, 100%);
+    --color-black: hsl(0, 0%, 0%);
+    --color-dark-gray: hsl(0, 0%, 55%);
+    --color-very-dark-gray: hsl(0, 0%, 41%);
+    --img-gradient: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.563),
+        transparent
+    );
+    --josefin-sans: "Josefin Sans", serif;
+    --alata: "Alata";
+    --about-us-padding: clamp(2.5rem, 11.765vw + -5.588rem, 5rem);
+    --h1-size: clamp(1.5rem, 1.788vw + 1.142rem, 2.25rem);
+    --h2-size: clamp(1.5rem, 2.143vw + 1.071rem, 3rem);
+    --main-padding-top-and-bottom: clamp(6.25rem, 7.143vw + 4.821rem, 11.25rem);
+    --padding-left-and-right: clamp(1.563rem, 8.482vw + -0.134rem, 7.5rem);
+}
+
+body {
+    min-height: 100vh;
+}
+
+nav {
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    padding: 30px 25px 0;
+    z-index: 10;
+    position: fixed;
+    color: white;
+    background-color: black;
+}
+
+/* main */
+main {
+    padding: var(--main-padding-top-and-bottom) var(--padding-left-and-right);
+}
+
+/* !header */
+
+#logo-and-close-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* hidden on desktop */
+#close-nav-btn {
+    transform: translateY(10px);
+}
+
+.display-none {
+    display: none;
+}
+
+#nav-links-cont {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+#nav-links-cont a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 200;
+    color: white;
+}
+
+header {
+    background-image: url("../images/mobile/image-hero.jpg");
+    height: 650px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px var(--padding-left-and-right);
+    position: relative;
+}
+
+h1 {
+    font-size: var(--h1-size);
+}
+
+nav,
+h1,
+h2 {
+    font-family: var(--josefin-sans);
+}
+
+h1,
+h2 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: var(--h2-size);
+    text-align: center;
+}
+
+#logo-and-nav-cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+#hamburger-btn {
+    transform: translateY(50%);
+}
+#h1-cont {
+    margin-top: 160px;
+    padding: 20px;
+    border: 2px solid var(--color-white);
+    max-width: 500px;
+}
+
+h1 {
+    font-weight: 200;
+    color: var(--color-white);
+    font-size: clamp(1.875rem, 4.471vw + 0.981rem, 3.75rem);
+}
+
+.creations-img-cont {
+    width: 100%;
+}
+
+#about-img {
+    width: 100%;
+}
+
+/* !about us section */
+
+#about-section {
+    margin: 0 auto;
+}
+
+#heading-and-par-cont {
+    max-width: 800px;
+    margin: 0 auto;
+}
+#about-par {
+    margin-top: 28px;
+    font-family: var(--alata);
+    text-align: center;
+    font-weight: 200;
+    color: #808080;
+    line-height: 1.5;
+    font-size: clamp(1.25rem, 0.513vw + 1.147rem, 1.5rem);
+}
+
+#about-us-heading {
+    margin-top: 50px;
+}
+
+/* !our creations section */
+
+#creations-section {
+    margin-top: clamp(2.5rem, 4.464vw + 1.607rem, 5.625rem);
+}
+
+#our-creations-cont {
+    margin-top: clamp(2.5rem, 3.571vw + 1.786rem, 5rem);
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+}
+
+/* styles for all containers in "our creations" */
+.creations-img-cont {
+    display: flex;
+    align-items: end; /*so that the text inside moves to the bottom*/
+    width: 100%; /* Full width of parent */
+    background-size: cover;
+    background-position: center; /* Centers the background image */
+    aspect-ratio: auto 16 / 5;
+    padding: clamp(1.25rem, 2.254vw + 0.722rem, 2.75rem);
+}
+
+/* corresponding mobile background imgs for each container in "our creations" */
+.creations-img-cont:nth-child(1) {
+    background-image: var(--img-gradient),
+        url("../images/mobile/image-deep-earth.jpg");
+}
+
+.creations-img-cont:nth-child(2) {
+    background-image: var(--img-gradient),
+        url("../images/mobile/image-night-arcade.jpg");
+}
+
+.creations-img-cont:nth-child(3) {
+    background-image: var(--img-gradient),
+        url("../images/mobile/image-soccer-team.jpg");
+}
+
+.creations-img-cont:nth-child(4) {
+    background-image: var(--img-gradient),
+        url("../images/mobile/image-grid.jpg");
+}
+
+.creations-img-cont:nth-child(5) {
+    background-image: var(--img-gradient),
+        url("../images/mobile/image-from-above.jpg");
+}
+
+.creations-img-cont:nth-child(6) {
+    background-image: var(--img-gradient),
+        url("../images/mobile/image-pocket-borealis.jpg");
+}
+
+.creations-img-cont:nth-child(7) {
+    background-image: var(--img-gradient),
+        url("../images/mobile/image-curiosity.jpg");
+}
+
+.creations-img-cont:nth-child(8) {
+    background-image: var(--img-gradient),
+        url("../images/mobile/image-fisheye.jpg");
+}
+
+.creations-text {
+    color: var(--color-white);
+    font-family: var(--josefin-sans);
+    letter-spacing: 1.2px;
+    font-weight: 200;
+    font-size: clamp(1.5rem, 0.751vw + 1.324rem, 2rem);
+    width: 50%;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+/* targets the 4th paragraph specifically */
+.creations-img-cont:nth-of-type(4) > .creations-text {
+    width: 30%;
+}
+
+/* doesn't have children and is used in 1 place so we don't need to give the <a></a> elem an id */
+
+/* general styles for both mobile and desktop "see all" button */
+.see-all-btn {
+    width: fit-content;
+    margin: 45px auto 0;
+    padding: 10px 40px;
+    border: 2px solid black;
+    color: var(--color-black);
+    text-decoration: none;
+    font-family: var(--alata);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+/* desktop "see all button" */
+#see-all-btn-desktop {
+    display: none;
+}
+
+#see-all-btn-desktop:hover {
+    background-color: var(--color-black);
+    color: white;
+}
+
+/* mobile "see all button" */
+#see-all-btn-mobile {
+    display: block;
+}
+
+/* !footer */
+
+/* page links has display flex so that it can be vertical */
+footer {
+    padding: 40px;
+    background-color: var(--color-black);
+    font-family: var(--alata);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#page-links,
+#social-links-cont {
+    margin-top: 30px;
+}
+
+/* no need to give a  */
+#page-links > a {
+    display: block;
+    text-decoration: none;
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+#copyright {
+    color: grey;
+    margin-top: 16px;
+}
+
+#attribution {
+    font-size: 12px;
+    margin-top: 48px;
+}
+
+/* giving each social link element (<a/>) a class because each has children and we need a selector to easily select it's children */
+.social-link {
+    text-decoration: none;
+    margin-right: 14px;
+    display: inline-block;
+}
+
+.social-link > svg {
+    display: block; /*so that it properly fills its container*/
+}
+
+/* the breakpoint where the about us section becomes horizontal */
+@media (min-width: 1100px) {
+    /*! header */
+    header {
+        background-image: var(--img-gradient),
+            url("../images/desktop/image-hero.jpg");
+    }
+
+    /* hide the hamburger and close button */
+    #hamburger-btn,
+    #logo-and-close-btn {
+        display: none;
+    }
+
+    /* the nav is shown, even if it was hidden by the user */
+    .display-none {
+        display: unset;
+    }
+
+    nav {
+        padding: 0;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+        font-family: var(--alata);
+        position: relative; /*changed from position fixed on mobile */
+        width: 60%; /*so that the flex container has more room to grow*/
+        max-width: 500px;
+    }
+
+    #nav-links-cont {
+        margin-top: 0px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #nav-links-cont > a {
+        text-decoration: none;
+        text-transform: capitalize;
+        position: relative;
+        font-size: clamp(1rem, 1.071vw + 0.336rem, 1.3rem);
+        margin-bottom: 0;
+        font-weight: 200;
+        color: white;
+        display: inline-block; /*this is made to be 100% of the parent div container, so that the after element can inherit it*/
+    }
+
+    #nav-links-cont > a:hover::after {
+        content: "";
+        position: absolute;
+        background-color: white;
+        width: 20px; /*inherits the width of the div*/
+        height: 3px;
+        bottom: -10px;
+        left: 25%;
+    }
+
+    /* h1 heading */
+
+    #h1-cont {
+        max-width: unset;
+        width: clamp(31.25rem, 44.643vw + 3.571rem, 43.75rem);
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: clamp(3.75rem, 4.464vw + 0.982rem, 5rem);
+    }
+
+    /* !about section */
+    #about-section {
+        max-width: 100%; /*max width changed from 600px to just fill the container*/
+        position: relative; /*so that the heading and par container can be positioned absolutely*/
+    }
+
+    #heading-and-par-cont {
+        background-color: white;
+        position: absolute;
+        width: 50%;
+        right: 0;
+        bottom: -0.3px; /*goes a little bit beyond the bottom*/
+        padding-top: var(--about-us-padding);
+        padding-left: var(--about-us-padding);
+    }
+
+    /* about us */
+
+    #about-us-heading {
+        margin-top: 0;
+    }
+
+    picture {
+        display: block; /*so that it can perfectly fill its container*/
+        width: 70%;
+    }
+
+    #about-img {
+        display: block;
+        width: 100%;
+    }
+
+    #heading-and-par-cont > h2,
+    #about-par {
+        text-align: start;
+    }
+
+    #about-par {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    /* !creations section */
+
+    #h2-cont-and-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    /* mobile "see all button" */
+    #see-all-btn-mobile {
+        display: none;
+    }
+
+    /* desktop "see all button" */
+    #see-all-btn-desktop {
+        margin: 0;
+        display: inline-block;
+    }
+
+    #our-creations-cont {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px 30px;
+    }
+
+    .creations-img-cont {
+        width: calc(
+            25% - 30px
+        ); /*-take a 1/4th of the container MINUS the space for the gap*/
+        aspect-ratio: 1 / 1.75;
+        flex-grow: 1;
+    }
+
+    /* corresponding desktop background bg imgs for each container in "our creations" */
+
+    .creations-img-cont:nth-child(1) {
+        background-image: var(--img-gradient),
+            url("../images/desktop/image-deep-earth.jpg");
+    }
+
+    .creations-img-cont:nth-child(2) {
+        background-image: var(--img-gradient),
+            url("../images/desktop/image-night-arcade.jpg");
+    }
+
+    .creations-img-cont:nth-child(3) {
+        background-image: var(--img-gradient),
+            url("../images/desktop/image-soccer-team.jpg");
+    }
+
+    .creations-img-cont:nth-child(4) {
+        background-image: var(--img-gradient),
+            url("../images/desktop/image-grid.jpg");
+    }
+
+    .creations-img-cont:nth-child(5) {
+        background-image: var(--img-gradient),
+            url("../images/desktop/image-from-above.jpg");
+    }
+
+    .creations-img-cont:nth-child(6) {
+        background-image: var(--img-gradient),
+            url("../images/desktop/image-pocket-borealis.jpg");
+    }
+
+    .creations-img-cont:nth-child(7) {
+        background-image: var(--img-gradient),
+            url("../images/desktop/image-curiosity.jpg");
+    }
+
+    .creations-img-cont:nth-child(8) {
+        background-image: var(--img-gradient),
+            url("../images/desktop/image-fisheye.jpg");
+    }
+
+    .creations-text {
+        width: 100%;
+    }
+
+    /* targets the 6th paragraph specifically */
+    .longer-text {
+        font-size: 28px;
+    }
+
+    /* !footer */
+
+    footer {
+        padding: 40px var(--padding-left-and-right);
+        text-align: start;
+    }
+    #footer-content-cont {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #logo #page-links,
+    #social-links-cont {
+        margin-top: 0;
+    }
+
+    #logo-and-page-links-cont {
+        position: relative;
+        width: fit-content;
+    }
+
+    #page-links {
+        display: flex;
+        /* position: absolute; */
+        bottom: 0;
+    }
+
+    #page-links > a {
+        position: relative;
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+
+    #page-links,
+    #copyright {
+        margin-top: 32px;
+    }
+
+    #page-links > a:hover::after {
+        content: "";
+        position: absolute;
+        background-color: white;
+        width: 20px;
+        height: 3px;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #copyright {
+        font-size: 16px;
+    }
+
+    #social-links-cont {
+        position: relative;
+    }
+
+    .social-link:hover::after {
+        content: "";
+        position: absolute;
+        background-color: white;
+        width: 24px;
+        height: 2.5px;
+        bottom: -10px;
+    }
+}
