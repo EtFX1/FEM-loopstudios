@@ -170,9 +170,9 @@ h1 {
 
 #our-creations-cont {
     margin-top: clamp(2.5rem, 3.571vw + 1.786rem, 5rem);
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 20px 0;
+    height: auto; /*to make sure that the height is 100% of the content*/
 }
 
 /* styles for all containers in "our creations" */
@@ -451,17 +451,13 @@ footer {
     }
 
     #our-creations-cont {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 30px 30px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+        gap: 30px;
     }
 
     .creations-img-cont {
-        width: calc(
-            25% - 30px
-        ); /*-take a 1/4th of the container MINUS the space for the gap*/
         aspect-ratio: 1 / 1.75;
-        flex-grow: 1;
     }
 
     /* corresponding desktop background bg imgs for each container in "our creations" */
