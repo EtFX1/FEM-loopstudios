@@ -23,8 +23,9 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-loopstudios-landing-page-using-flexbox-aj1VjdNjNl)
--   Live Site URL: [Add live site URL here](https://etfx1.github.io/FEM-loopstudios/)
+[Solution URL](https://www.frontendmentor.io/solutions/responsive-loopstudios-landing-page-using-flexbox-aj1VjdNjNl)
+
+[Live site URL](https://etfx1.github.io/FEM-loopstudios/)
 
 ### Built with
 
